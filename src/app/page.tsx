@@ -1,5 +1,3 @@
-
-import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import HeroSection from "./Components/HeroSection";
 import EditorPick from "./Components/EditorPick";

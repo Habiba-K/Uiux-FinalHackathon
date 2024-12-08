@@ -4,7 +4,6 @@ import "./globals.css";
 import Navbar from "./Components/Navbar";
 import Topbar from "./Components/topbar";
 import Footer from "./Components/Footer";
-
 const montserrat = Montserrat({ subsets: ["latin"],
   weight:['400','700'],
  });
@@ -25,8 +24,7 @@ export default function RootLayout({
       <Topbar/>
       <Navbar/>
         <main className="max-w-[1440px] mx-auto container">{children}</main>
-      <Footer></Footer>
-        </body>
+      <Footer></Footer></body>
     </html>
   );
 }

@@ -9,9 +9,6 @@ const config: Config = {
   ],
   theme: {
   	extend: {
-		colors:{
-
-		brandprimary:"#ffffff",
   		backgroundImage: {
   			'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
   			'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
@@ -63,7 +60,6 @@ const config: Config = {
   				'5': 'hsl(var(--chart-5))'
   			}
   		}
-	}
   	}
   },
   plugins: [require("tailwindcss-animate")],

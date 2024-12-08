@@ -43,20 +43,20 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex gap-3 text-[#23A6F0]  text-sm">
-          <Button size={"icon"} color={"#23A6F0"} className="rounded-full mr-10 font-bold">
-            <MdPersonOutline />
+          <Button  color={"blue"} variant={"outline"} className="rounded-full mr-10 font-bold">
+            <MdPersonOutline  />
             Login / Register
           </Button>
 
-          <Button size={"icon"} className="rounded-full ">
+          <Button color={"blue"} variant={"outline"} size={"icon"} className="rounded-full ">
             <FiSearch />
           </Button>
-          <Button size={"icon"} className="rounded-full ">
+          <Button color={"blue"} variant={"outline"} size={"icon"} className="rounded-full ">
             <Heart />
           </Button>
 
-          <Button size={"icon"} className="rounded-full">
-            <ShoppingCart />
+          <Button size={"icon"} color={"blue"} variant={"outline"}className="rounded-full">
+            <ShoppingCart  />
           </Button>
         </div>
 
@@ -77,7 +77,7 @@ const Navbar = () => {
                 Bandage
                 <div className="relative ml-10"></div>
                 <div className="space-x-2">
-                  <Button size={"icon"} className="rounded-full ">
+                  <Button size={"icon"}  className="  rounded-full ">
                     <FiSearch />
                   </Button>
 
