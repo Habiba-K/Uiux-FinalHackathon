@@ -5,9 +5,9 @@ import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import { TiSocialYoutube } from "react-icons/ti";
 import { IoCallOutline } from "react-icons/io5";
 import { BsEnvelope } from "react-icons/bs";
-const Topbar = () => {
+const Topbar = (Props:any ) => {
   return (
-    <section className=" w-full  p-3 bg-[#252B42] hidden lg:flex items-center justify-between">
+  <section className={` w-full  p-3 ${Props.bgColor} hidden lg:flex items-center justify-between`}>
       <div className="flex items-center gap-4 ml-6">
         <IoCallOutline className="text-white" />
         <p className="text-white font-bold text-sm">(225) 555-0118</p>

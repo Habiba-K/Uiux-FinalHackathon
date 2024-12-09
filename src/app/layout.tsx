@@ -4,9 +4,7 @@ import "./globals.css";
 import Navbar from "./Components/Navbar";
 import Topbar from "./Components/topbar";
 import Footer from "./Components/Footer";
-const montserrat = Montserrat({ subsets: ["latin"],
-  weight:['400','700'],
- });
+const montserrat = Montserrat({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata: Metadata = {
   title: "Ecommerce Template",
@@ -21,10 +19,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={montserrat.className}>
-      <Topbar/>
-      <Navbar/>
-        <main className="max-w-[1440px] mx-auto container">{children}</main>
-      <Footer></Footer></body>
+        <div>
+          <Topbar bgColor="bg-[#252B42]" />
+          <Navbar />
+          <main className="max-w-[1440px] mx-auto container">{children}</main>
+          <Footer></Footer>
+        </div>
+      </body>
     </html>
   );
 }

@@ -8,6 +8,8 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { title } from "process";
+
 import { Heart, MenuIcon, ShoppingCart } from "lucide-react";
 import Link from "next/link";
 import React from "react";
@@ -20,10 +22,10 @@ const Navbar = () => {
       <div className="max-w-[1440px] mx-auto flex items-center justify-between">
         <h1 className="text-2xl font-bold text-[#252B42]">Bandage</h1>
         <div className="hidden lg:flex gap-4 text-sm font-bold text-[#737373]">
-          <Link href={"#"} className="text-sm font-bold">
+          <Link href={"http://localhost:3000/"} className="text-sm font-bold">
             Home
           </Link>
-          <Link href={"#"} className="text-sm font-bold">
+          <Link  href={"#"} className="text-sm font-bold">
             <select>
               <option value="">Shop</option>
             </select>
@@ -62,13 +64,7 @@ const Navbar = () => {
 
         <Sheet>
           <SheetTrigger className="flex lg:hidden ">
-            <Button
-              color={"#252B42"}
-              size={"icon"}
-              className=" font-bold rounded-full mr-5"
-            >
-              <MenuIcon />
-            </Button>
+          <MenuIcon className="w-5 h-5" />
           </SheetTrigger>
 
           <SheetContent>
