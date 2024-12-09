@@ -1,6 +1,6 @@
 Templte-5
 Vercel Link
-* https://uiux-final-hackathon-ofrjiwtth-habiba-khans-projects.vercel.app/
+* https://vercel.com/habiba-khans-projects/uiux-final-hackathon
 
 
 
