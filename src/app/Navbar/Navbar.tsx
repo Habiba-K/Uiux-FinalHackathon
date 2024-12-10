@@ -33,13 +33,13 @@ const Navbar = () => {
           <Link href={"/About"} className="text-sm font-bold">
             About
           </Link>
-          <Link href={"#"} className="text-sm font-bold">
-            Blog
+          <Link href={"/ProductDetails"} className="text-sm font-bold">
+            Product
           </Link>
-          <Link href={"#"} className="text-sm font-bold">
+          <Link href={"/Contact"} className="text-sm font-bold">
             Contact
           </Link>
-          <Link href={"/ProductDetails"} className="text-sm font-bold">
+          <Link href={"/MoreTeam"} className="text-sm font-bold">
             Pages
           </Link>
         </div>
@@ -84,17 +84,23 @@ const Navbar = () => {
               </SheetTitle>
               <SheetDescription className="text-center">
                 <div className="flex flex-col gap-6 mt-6 text-[#737373] text-sm">
-                  <Link href={"#"} className="text-sm font-normal">
+                  <Link href={"http://localhost:3000/"} className="text-sm font-normal">
                     Home
                   </Link>
-                  <Link href={"#"} className="text-sm font-normal">
+                  <Link href={"/Shop"} className="text-sm font-normal">
+                    Shop
+                  </Link>
+                  <Link href={"/About"} className="text-sm font-normal">
+                    About
+                  </Link>
+                  <Link href={"/ProductDetails"} className="text-sm font-normal">
                     Product
                   </Link>
-                  <Link href={"#"} className="text-sm font-normal">
-                    Pricing
-                  </Link>
-                  <Link href={"#"} className="text-sm font-normal">
+                  <Link href={"/Contact"} className="text-sm font-normal">
                     Contact
+                  </Link>
+                  <Link href={"/MoreTeam"} className="text-sm font-normal">
+                    Pages
                   </Link>
                 </div>
               </SheetDescription>

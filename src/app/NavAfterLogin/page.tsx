@@ -26,7 +26,7 @@ const NavAfterLogin = () => {
           <Link href={"/Pricing"} className="text-sm font-bold">
             Pricing
           </Link>
-          <Link href={"#"} className="text-sm font-bold">
+          <Link href={"/Contact"} className="text-sm font-bold">
             Contact
           </Link>
         </div>
@@ -72,7 +72,7 @@ const NavAfterLogin = () => {
                   <Link href={"/Pricing"} className="text-sm font-bold">
                     Pricing
                   </Link>
-                  <Link href={"#"} className="text-sm font-bold">
+                  <Link href={"/Contact"} className="text-sm font-bold">
                     Contact
                   </Link>
                 </div>

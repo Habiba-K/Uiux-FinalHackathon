@@ -49,7 +49,7 @@ export default function CardSection() {
         </div>
       </div>
 
-      <div className="w-[50%]  md:w-[75%] lg:max-w-[1440px] mx-auto px-4">
+      <div className=" lg:max-w-[1440px] mx-auto px-4">
         {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {cards.map((card) => (

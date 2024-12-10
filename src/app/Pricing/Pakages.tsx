@@ -56,7 +56,7 @@ const Pakages = () => {
           >
             <h3 className="text-lg font-bold text-gray-800 ">FREE</h3>
             <p className="mt-2 text-gray-600 md:text-base max-w-lg mx-auto w-[140px] font-bold">Organize across all apps by hand</p>
-            <div className="text-3xl font-bold text-gray-800 mt-4">
+            <div className="text-3xl font-bold text-blue-500 mt-4">
               {pricingData.free.price} <span className="text-sm  text-[#23A6F0] font-bold">$/per month</span>
             </div>
             <ul className="text-sm text-gray-600 mt-4 space-y-2">
@@ -68,28 +68,22 @@ const Pakages = () => {
                 </li>
               ))}
             </ul>
-            {/* <div className="flex justify-center items-end">
-            <button
-                className="rounded bg-[#23A6F0] text-white md:mr-10 font-bold px-10 py-3">
-                Try it free now
-            </button>
-            </div> */}
           </div>
 
           {/* Standard Plan */}
           <div
-            className=" md:text-base max-w-lg mx-auto border-2 border-blue-300 rounded-2xl p-6 hover:shadow-md transition">
-            <h3 className="text-lg font-bold text-gray-800">STANDARD</h3>
-            <p className="mt-2 text-gray-600 md:text-base max-w-lg mx-auto w-[140px] font-bold">Organize across all apps by hand</p>
-            <div className="text-3xl font-bold text-gray-800 mt-4">
+            className=" md:text-base max-w-lg mx-auto border-2 border-blue-300 rounded-2xl p-6 bg-gray-600">
+            <h3 className="text-lg font-bold text-white">STANDARD</h3>
+            <p className="mt-2 text-white md:text-base max-w-lg mx-auto w-[140px] font-bold">Organize across all apps by hand</p>
+            <div className="text-3xl font-bold text-blue-500 mt-4">
               {plan === "monthly"
                 ? pricingData.standard.monthly
                 : pricingData.standard.yearly}{" "}
               <span className="text-sm text-[#23A6F0] font-bold">$/month</span>
             </div>
-            <ul className="text-sm text-gray-600 mt-4 space-y-2">
+            <ul className="text-sm text-white mt-4 space-y-2">
               {pricingData.standard.features.map((feature, idx) => (
-                <li key={idx} className="flex items-center gap-2 rounded-lg font-bold text-[#252B42]">
+                <li key={idx} className="flex items-center gap-2 rounded-lg font-bold text-white">
                   <Button color={"blue"}  size={"icon"} className="rounded-full text-white font-bold bg-green-500 ">
                  <GoCheck />
                   </Button> {feature}
@@ -97,12 +91,7 @@ const Pakages = () => {
                 
               ))}
             </ul>
-            {/* <div className="ml-3 mt-4">
-            <button
-                className="rounded bg-[#23A6F0] text-white md:mr-10 font-bold px-10 py-3">
-                Try it free now
-            </button>
-            </div> */}
+
           </div>
           {/* Premium Plan */}
           <div
@@ -110,7 +99,7 @@ const Pakages = () => {
           >
             <h3 className="text-lg font-bold text-gray-800">PREMIUM</h3>
             <p className="mt-2 text-gray-600 md:text-base max-w-lg mx-auto w-[140px] font-bold">Organize across all apps by hand</p>
-            <div className="text-3xl font-bold text-gray-800 mt-4">
+            <div className="text-3xl font-bold text-blue-500 mt-4">
               {plan === "monthly"
                 ? pricingData.premium.monthly
                 : pricingData.premium.yearly}{" "}
@@ -125,12 +114,7 @@ const Pakages = () => {
                 </li>
               ))}
             </ul>
-            {/* <div className="ml-3 mt-4">
-            <button
-                className="rounded bg-[#23A6F0] text-white md:mr-10 font-bold px-10 py-3">
-                Try it free now
-            </button>
-            </div> */}
+
           </div>
         </div>
       </div>

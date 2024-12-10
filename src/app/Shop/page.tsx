@@ -105,7 +105,7 @@ const page = () => {
             </div>
           </div>
           <div className="w-[177px] h-[46px]  flex gap-[15px] justify-center items-center ">
-            <h6 className="font-Montserrat font-bold text-[14px] leading-[24px] text-[#737373]">
+            <h6 className="ont-bold text-[14px] leading-[24px] text-[#737373]">
               Views:
             </h6>
             <Image
