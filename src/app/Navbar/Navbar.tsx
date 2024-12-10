@@ -25,12 +25,12 @@ const Navbar = () => {
           <Link href={"http://localhost:3000/"} className="text-sm font-bold">
             Home
           </Link>
-          <Link  href={"#"} className="text-sm font-bold">
+          <Link  href={"/Shop"} className="text-sm font-bold">
             <select>
               <option value="">Shop</option>
             </select>
           </Link>
-          <Link href={"#"} className="text-sm font-bold">
+          <Link href={"/About"} className="text-sm font-bold">
             About
           </Link>
           <Link href={"#"} className="text-sm font-bold">
@@ -39,7 +39,7 @@ const Navbar = () => {
           <Link href={"#"} className="text-sm font-bold">
             Contact
           </Link>
-          <Link href={"#"} className="text-sm font-bold">
+          <Link href={"/ProductDetails"} className="text-sm font-bold">
             Pages
           </Link>
         </div>

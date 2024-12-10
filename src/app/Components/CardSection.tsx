@@ -57,18 +57,18 @@ export default function CardSection() {
               key={card.id}
               className="bg-white border rounded-lg shadow hover:shadow-lg transition duration-200"
             >
-                <Button className="ml-2 mt-1 absolute bg-red-500 text-white px-5  py-1 font-semibold">
-                  New
-                </Button>  
+              <Button className="ml-2 mt-1 absolute bg-red-500 text-white px-5  py-1 font-semibold">
+                New
+              </Button>
               {/* Card Image */}
               <Image
                 src={card.image}
                 alt={card.title}
                 width={400}
                 height={300}
-                className="w-full h-48 object-cover rounded-t-lg"
+                className="w-full h-48 object-cover rounded-lg"
               />
-                            {/* Card Content */}
+              {/* Card Content */}
               <div className="p-4">
                 <div className="flex items-center gap-2 text-xs text-blue-500 uppercase font-semibold">
                   <span>Google</span>

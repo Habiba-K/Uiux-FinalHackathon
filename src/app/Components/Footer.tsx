@@ -9,212 +9,105 @@ import { TiSocialYoutube } from "react-icons/ti";
 
 const Footer = () => {
   return (
-    <footer className=" text-gray-700  px-5 ">
-      <div className="grid grid-cols-2  mx-auto bg-gray-300 rounded  py-10">
-        <div className=" px-10 ">
-          <h2 className=" text-2xl font-bold text-gray-800">Bandage</h2>
-        </div>
-        <div className="flex space-x-4 mt-4 justify-end pr-20">
-          <div className="flex gap-2 ">
-            <FaFacebook className="text-blue-500 w-4 h-4 " />
-            <TiSocialYoutube className="text-blue-500 w-4 h-4 " />
-            <FaInstagram className="text-blue-500 w-4 h-4 " />
-            <FaTwitter className="w-4 h-4  text-blue-500" />
-          </div>
-        </div>
-      </div>
-
-      <div className="container mx-auto px-6 py-10 w-[75%]   md:w-[95%] lg:max-w-[1440px] ">
-        {/* Top Section */}
-        <div className="flex flex-wrap justify-between items-start space-y-6 md:space-y-0">
-          {/* Logo and Social Icons */}
-
-          {/* Links Section */}
-          <div className="flex flex-wrap space-x-16">
-            {/* Column 1 */}
-            <div>
-              <h3 className="font-semibold text-gray-800">Company Info</h3>
-              <ul className="mt-4 space-y-2">
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-blue-500 text-gray-500 font-semibold"
-                  >
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-blue-500 text-gray-500 font-semibold"
-                  >
-                    Carrier
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-blue-500 text-gray-500 font-semibold"
-                  >
-                    We are hiring
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-blue-500 text-gray-500 font-semibold"
-                  >
-                    Blog
-                  </a>
-                </li>
-              </ul>
-            </div>
-            {/* Column 2 */}
-            <div>
-              <h3 className="font-semibold text-gray-800">Legal</h3>
-              <ul className="mt-4 space-y-2">
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-blue-500 text-gray-500 font-semibold"
-                  >
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-blue-500 text-gray-500 font-semibold"
-                  >
-                    Carrier
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-blue-500 text-gray-500 font-semibold"
-                  >
-                    We are hiring
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-blue-500 text-gray-500 font-semibold"
-                  >
-                    Blog
-                  </a>
-                </li>
-              </ul>
-            </div>
-            {/* Column 3 */}
-            <div>
-              <h3 className="font-semibold text-gray-800">Features</h3>
-              <ul className="mt-4 space-y-2">
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-blue-500 text-gray-500 font-semibold"
-                  >
-                    Business Marketing
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-blue-500 text-gray-500 font-semibold"
-                  >
-                    User Analytics
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-blue-500 text-gray-500 font-semibold"
-                  >
-                    Live Chat
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-blue-500 text-gray-500 font-semibold"
-                  >
-                    Unlimited Support
-                  </a>
-                </li>
-              </ul>
-            </div>
-            {/* Column 4 */}
-            <div>
-              <h3 className="font-semibold text-gray-800">Resources</h3>
-              <ul className="mt-4 space-y-2">
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-blue-500 text-gray-500 font-semibold"
-                  >
-                    iOS & Android
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-blue-500 text-gray-500 font-semibold"
-                  >
-                    Watch a Demo
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-blue-500 text-gray-500 font-semibold"
-                  >
-                    Customers
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-blue-500 text-gray-500 font-semibold"
-                  >
-                    API
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Newsletter Section */}
-          <div>
-            <h3 className="font-semibold text-gray-800">Get In Touch</h3>
-            <form className="mt-4">
-              <div className="flex">
-                <input
-                  type="email"
-                  placeholder="Your Email"
-                  className="p-2 w-full border border-gray-300 rounded-l-md focus:outline-none focus:ring focus:ring-blue-300"
-                />
-                <button
-                  type="submit"
-                  className="bg-blue-500 text-white font-semibold px-4 py-2 rounded-r-md hover:bg-blue-600"
-                >
-                  Subscribe
-                </button>
-              </div>
-              <p className="mt-2 text-sm text-gray-500 font-bold">
-                Lore imp sum dolor Amit.
-              </p>
-            </form>
-          </div>
-        </div>
-
-        {/* Bottom Section */}
-        <div className=" font-semibold mt-10 border-t pt-4 text-center text-sm text-gray-500">
-          Made With Love By Finland All Right Reserved
-        </div>
-      </div>
-    </footer>
+    <div>
+           {/* Footer */}
+    <footer className="bg-white px-10">
+             {/* Top Section */}
+             <section className="py-10   w-full h-30">
+                <div className="max-w-screen-xl mx-auto flex justify-between items-center">
+                    <div className="flex flex-col">
+                        <h1 className="text-[#252b42] text-2xl font-bold leading-loose tracking-tight mx-2">Bandage</h1>
+                    </div>
+                    <div className="flex gap-6">
+                      <FaFacebook className="text-blue-500 w-4 h-4 " />
+                      <TiSocialYoutube className="text-blue-500 w-4 h-4 " />
+                      <FaInstagram className="text-blue-500 w-4 h-4 " />
+                      <FaTwitter className="w-4 h-4  text-blue-500" />
+                    </div>
+                </div>
+            </section>
+  
+            {/* Divider */}
+            <div className="border-t border-[#e6e6e6]" />
+  
+            {/* Main Footer Content */}
+            <section className="bg-white py-12">
+                <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-12">
+                    {/* Company Info */}
+                    <div>
+                        <h2 className="text-[#252b42] text-base font-bold">Company Info</h2>
+                        <nav className="flex flex-col gap-2.5 mt-3">
+                            <a href="#" className="text-[#727272] text-sm font-bold">About Us</a>
+                            <a href="#" className="text-[#727272] text-sm font-bold">Careers</a>
+                            <a href="#" className="text-[#727272] text-sm font-bold">We Are Hiring</a>
+                            <a href="#" className="text-[#727272] text-sm font-bold">Blog</a>
+                        </nav>
+                    </div>
+  
+                    {/* Legal */}
+                    <div>
+                        <h2 className="text-[#252b42] text-base font-bold">Legal</h2>
+                        <nav className="flex flex-col gap-2.5 mt-3">
+                            <a href="#" className="text-[#727272] text-sm font-bold">Terms of Service</a>
+                            <a href="#" className="text-[#727272] text-sm font-bold">Privacy Policy</a>
+                            <a href="#" className="text-[#727272] text-sm font-bold">Cookies</a>
+                            <a href="#" className="text-[#727272] text-sm font-bold">Refund Policy</a>
+                        </nav>
+                    </div>
+  
+                    {/* Features */}
+                    <div>
+                        <h2 className="text-[#252b42] text-base font-bold">Features</h2>
+                        <nav className="flex flex-col gap-2.5 mt-3">
+                            <a href="#" className="text-[#727272] text-sm font-bold">Business Marketing</a>
+                            <a href="#" className="text-[#727272] text-sm font-bold">User Analytics</a>
+                            <a href="#" className="text-[#727272] text-sm font-bold">Live Chat</a>
+                            <a href="#" className="text-[#727272] text-sm font-bold">Unlimited Support</a>
+                        </nav>
+                    </div>
+  
+                    {/* Resources */}
+                    <div>
+                        <h2 className="text-[#252b42] text-base font-bold">Resources</h2>
+                        <nav className="flex flex-col gap-2.5 mt-3">
+                            <a href="#" className="text-[#727272] text-sm font-bold">iOS & Android</a>
+                            <a href="#" className="text-[#727272] text-sm font-bold">Watch a Demo</a>
+                            <a href="#" className="text-[#727272] text-sm font-bold">Customers</a>
+                            <a href="#" className="text-[#727272] text-sm font-bold">API</a>
+                        </nav>
+                    </div>
+  
+                    {/* Get in Touch */}
+                    <div>
+                        <h2 className="text-[#252b42] text-base font-bold">Get In Touch</h2>
+                        <div className="mt-3">
+                            <div className="relative mb-4">
+                                <input
+                                    type="email"
+                                    className="w-full h-12 px-4 border border-[#e6e6e6] rounded-lg bg-[#f8f8f8] text-[#727272] text-sm font-normal"
+                                    placeholder="Your Email"
+                                />
+                                <button className="absolute right-0 top-0 h-12 px-4 bg-[#23a6f0] text-white text-sm font-normal rounded-r-lg">
+                                    Subscribe
+                                </button>
+                            </div>
+                            <p className="text-[#727272] text-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+  
+            {/* Bottom Section */}
+            <section className="bg-[#FAFAFA] py-4">
+                <div className="max-w-screen-xl mx-auto flex justify-between items-center">
+                    <p className="text-[#727272] text-sm font-bold">Made with love by Finland. All rights reserved.</p>
+                    <div className="flex gap-4">
+                       
+                    </div>
+                </div>
+            </section>
+        </footer>
+    </div>
   );
 };
 
