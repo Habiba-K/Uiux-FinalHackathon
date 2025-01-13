@@ -40,7 +40,7 @@ export default function ProductCarousel() {
           <button
             onClick={handlePrev}
             disabled={currentPage === 1}
-            className={`px-4 py-2 rounded-md border ${
+            className={`px-2 sm:px-4 py-2 rounded-md border text-xs sm:text-base ${
               currentPage === 1
                 ? "bg-gray-300 text-gray-500 cursor-not-allowed"
                 : "bg-white text-blue-500 hover:bg-blue-100"
@@ -53,7 +53,7 @@ export default function ProductCarousel() {
               <button
                 key={i}
                 onClick={() => setCurrentPage(i + 1)}
-                className={`px-3 py-2 rounded-md ${
+                className={`px-2 sm:px-3 py-2 rounded-md text-xs sm:text-base ${
                   currentPage === i + 1
                     ? "bg-blue-500 text-white"
                     : "bg-white text-blue-500 border hover:bg-blue-100"
@@ -66,7 +66,7 @@ export default function ProductCarousel() {
           <button
             onClick={handleNext}
             disabled={currentPage === totalPages}
-            className={`px-4 py-2 rounded-md border ${
+            className={`px-2 sm:px-4 py-2 rounded-md border text-xs sm:text-base ${
               currentPage === totalPages
                 ? "bg-gray-300 text-gray-500 cursor-not-allowed"
                 : "bg-white text-blue-500 hover:bg-blue-100"

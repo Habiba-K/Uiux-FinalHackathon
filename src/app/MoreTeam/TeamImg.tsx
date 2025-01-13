@@ -25,11 +25,11 @@ const TeamImg= () => {
             </h6>
           </div>
         </div>
-      <section className="py-12 md:py-16  p-32 ">
+      <section className="py-12 md:py-16  sm:p-32 ">
         <div className=" mx-auto px-4 ">
           {/* Title */}
           {/* Grid */}
-          <div className=" grid grid-cols-1 lg:grid-cols-3 gap-3 w-[100%]  md:w-[90%] lg:max-w-[1440px] mx-auto mt-2 ">
+          <div className=" grid grid-cols-1  lg:grid-cols-3 gap-3 w-full lg:max-w-[1440px] mx-auto mt-2 ">
             {/* First Column (MEN) */}
             <div className="relative flex justify-center">
               <Image
@@ -43,14 +43,14 @@ const TeamImg= () => {
             </div>
 
             {/* Second Column  */}
-            <div className="grid grid-rows-1 lg:grid-rows-2 gap-4 justify-center ">
+            <div className="sm:grid grid-rows-1 lg:grid-rows-2 gap-4 justify-center ">
               
               <div className="relative ">
                 <Image
                   src="/images/team2.png"
                   alt="team2"
-                  width={327}
-                  height={200}
+                  width={424}
+                  height={424}
                   className="object-cover md:w-[260px] md:h-[200px]"
                 />
               </div>
@@ -59,8 +59,8 @@ const TeamImg= () => {
                 <Image
                   src="/images/team3.png"
                   alt="team3"
-                  width={325}
-                  height={200}
+                  width={424}
+                  height={424}
                   className="object-cover md:w-[260px] md:h-[185px]"
                 />
                 
@@ -74,8 +74,8 @@ const TeamImg= () => {
                 <Image
                   src="/images/team4.png"
                   alt="team4"
-                  width={327}
-                  height={200}
+                  width={424}
+                  height={424}
                   className="object-cover md:w-[260px] md:h-[200px]"
                 />
               </div>
@@ -84,8 +84,8 @@ const TeamImg= () => {
                 <Image
                   src="/images/team5.png"
                   alt="team5"
-                  width={325}
-                  height={200}
+                  width={424}
+                  height={424}
                   className="object-cover md:w-[260px] md:h-[185px]"
                 />
 

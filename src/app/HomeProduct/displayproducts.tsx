@@ -14,7 +14,7 @@ export default function DisplayedProductsHome() {
       <ProductHeader></ProductHeader>
 
       <div className="bg-white py-10">
-        <div className="w-[100%]  md:w-[95%] lg:max-w-[1440px]  mx-auto px-4 ">
+        <div className="w-[100%]  lg:max-w-[1440px]  mx-auto px-4 ">
           
           {/* Products Grid - 2 rows and 4 columns */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 overflow-hidden ">

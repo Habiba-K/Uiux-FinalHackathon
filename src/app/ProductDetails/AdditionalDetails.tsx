@@ -4,16 +4,16 @@ import Image from "next/image";
 const AdditionalDetails = () => {
   return (
     <div>
-      <div className="max-w-[1440px] mx-auto h-[72px] grid grid-cols-3 place-items-center  border-b-2">
-        <span className="font-semibold text-sm leading-[24px]  text-[#737373]">
+      <div className="max-w-[1440px] mx-auto h-[72px] grid grid-cols-1 sm:grid-cols-3 place-items-center  border-b-2">
+        <span className="font-semibold text-xs sm:text-sm leading-[24px]  text-[#737373]">
           Description
         </span>
-        <span className="font-semibold text-sm leading-[24px]  text-[#737373]">
+        <span className="font-semibold text-xs sm:text-sm leading-[24px]  text-[#737373]">
           Additional Information
         </span>
-        <span className="font-semibold text-sm leading-[24px] flex text-[#737373]">
+        <span className="font-semibold text-xs sm:text-sm leading-[24px] flex text-[#737373]">
           Reviews
-          <h1 className="text-sm leading-sm text-[#23856D]">(0)</h1>
+          <h1 className="text-xs sm:text-sm leading-sm text-[#23856D]">(0)</h1>
         </span>
       </div>
 
@@ -32,21 +32,21 @@ const AdditionalDetails = () => {
         {/* Content Section */}
         <div className="flex flex-col md:flex-row  justify-center ">
           {/* Text Block */}
-          <div className=" w-[332px] space-y-4 gap-[5px]">
-            <h2 className="text-[24px] font-bold text-gray-800">
+          <div className="w-full sm:w-[332px] space-y-4 gap-[5px]">
+            <h2 className="text-sm md:text-[24px] font-bold text-gray-800">
               the quick fox jumps over
             </h2>
-            <p className="text-[#737373] font-bold text-sm leading-[20px]">
+            <p className="text-[#737373] font-bold text-xs sm:text-sm leading-[20px]">
               Met minim Mollie non desert Alamo est sit cliquey dolor do met
               sent. RELIT official consequent door ENIM RELIT Mollie. Excitation
               venial consequent sent nostrum met.
             </p>
-            <p className="text-[#737373] font-bold text-sm leading-[20px]">
+            <p className="text-[#737373] font-bold text-xs sm:text-sm leading-[20px]">
               Met minim Mollie non desert Alamo est sit cliquey dolor do met
               sent. RELIT official consequent door ENIM RELIT Mollie. Excitation
               venial consequent sent nostrum met.
             </p>
-            <p className="text-[#737373]  font-bold text-sm leading-[20px]">
+            <p className="text-[#737373]  font-bold text-xs sm:text-sm leading-[20px]">
               Met minim Mollie non desert Alamo est sit cliquey dolor do met
               sent. RELIT official consequent door ENIM RELIT Mollie. Excitation
               venial consequent sent nostrum met.
@@ -57,10 +57,10 @@ const AdditionalDetails = () => {
           <div className="space-y-6  justify-center gap-[30px]">
             {/* First List */}
             <div>
-              <h3 className="text-[24px] font-semibold text-gray-800 mb-[20px]">
+              <h3 className="text-sm md:text-[24px] font-semibold text-gray-800 mb-[20px]">
                 the quick fox jumps over
               </h3>
-              <ul className="mt-2 space-y-4 text-[#737373] font-bold text-sm leading-[20px]">
+              <ul className="mt-2 space-y-4 text-[#737373] font-bold text-xs sm:text-sm leading-[20px]">
                 <li className="flex items-center gap-2">
                   <Arrow></Arrow>
                   the quick fox jumps over the lazy dog
@@ -82,10 +82,10 @@ const AdditionalDetails = () => {
 
             {/* Second List */}
             <div>
-              <h3 className="text-[24px] font-bold text-gray-800">
+              <h3 className="text-sm md:text-[24px] font-bold text-gray-800">
                 the quick fox jumps over
               </h3>
-              <ul className="mt-2 space-y-4 text-[#737373] font-bold text-sm leading-[20px]">
+              <ul className="mt-2 space-y-4 text-[#737373] font-bold text-xs sm:text-sm leading-[20px]">
                 <li className="flex items-center gap-2">
                   <Arrow></Arrow>
                   the quick fox jumps over the lazy dog

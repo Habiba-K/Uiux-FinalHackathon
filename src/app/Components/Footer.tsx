@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import {
   FaFacebook,
@@ -11,15 +12,15 @@ const Footer = () => {
   return (
     <div>
            {/* Footer */}
-    <footer className="bg-white px-10">
+    <footer className="bg-white px-3 sm:px-10">
              {/* Top Section */}
-             <section className="py-10   w-full h-30">
-                <div className="max-w-screen-xl mx-auto flex justify-between items-center">
+             <section className="py-10  w-full h-30">
+                <div className="max-w-screen-xl mx-auto  sm:flex sm:justify-between items-center grid grid-cols-1 sm:grid-cols-2">
                     <div className="flex flex-col">
-                        <h1 className="text-[#252b42] text-2xl font-bold leading-loose tracking-tight mx-2">Bandage</h1>
+                        <h1 className="text-[#252b42] text-xl sm:text-2xl font-bold leading-loose tracking-tight mx-2">Bandage</h1>
                     </div>
-                    <div className="flex gap-6">
-                      <FaFacebook className="text-blue-500 w-4 h-4 " />
+                    <div className="flex  gap-6">
+                      <FaFacebook className="text-blue-500  w-4 h-4 " />
                       <TiSocialYoutube className="text-blue-500 w-4 h-4 " />
                       <FaInstagram className="text-blue-500 w-4 h-4 " />
                       <FaTwitter className="w-4 h-4  text-blue-500" />
@@ -37,7 +38,9 @@ const Footer = () => {
                     <div>
                         <h2 className="text-[#252b42] text-base font-bold">Company Info</h2>
                         <nav className="flex flex-col gap-2.5 mt-3">
-                            <a href="#" className="text-[#727272] text-sm font-bold">About Us</a>
+                        <Link href={"/About"} className="text-[#727272] text-sm font-bold">
+                            About Us
+                        </Link>
                             <a href="#" className="text-[#727272] text-sm font-bold">Careers</a>
                             <a href="#" className="text-[#727272] text-sm font-bold">We Are Hiring</a>
                             <a href="#" className="text-[#727272] text-sm font-bold">Blog</a>

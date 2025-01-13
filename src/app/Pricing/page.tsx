@@ -13,7 +13,7 @@ const page = () => {
       <br /> <br />
       <PricingHeader></PricingHeader>
       <Pakages></Pakages>
-      <p className="bg-252B42 text-xl text-center mt-5">
+      <p className="bg-252B42 text-md sm:text-xl text-center mt-5">
         Trusted By Over 4000 Big Companies
       </p>
       <Clients></Clients>

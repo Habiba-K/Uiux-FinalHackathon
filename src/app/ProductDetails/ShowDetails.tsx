@@ -129,8 +129,8 @@ export default function Pages() {
           </div>
 
           {/* Buttons */}
-          <div className="mt-6 flex items-center gap-4">
-            <button className="px-6 py-2 bg-[#23A6F0] text-white rounded-md hover:bg-blue-600">
+          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 items-center gap-4">
+            <button className="px-2 sm:px-6 py-2 bg-[#23A6F0] text-white text-xs sm:text-lg rounded-md hover:bg-blue-600">
               Select Options
             </button>
             <div className="flex items-center gap-4">

@@ -12,7 +12,7 @@ const Neutraluniverse = () => {
           height={400}
         />
         <div>
-          <div className="w-full   sm:text-center md:text-start lg:px-10 mt-8 lg:mt-10">
+          <div className="w-full pl-5 sm:pl-0  sm:text-center md:text-start lg:px-10 mt-8 lg:mt-10">
             <h5 className="text-[#BDBDBD] text-sm lg:text-base font-bold mb-3">
             SUMMER 2020
             </h5>

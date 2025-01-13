@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -20,21 +19,21 @@ const Navbar = () => {
   return (
     <nav className="w-full h-[20px] p-4 ">
       <div className="max-w-[1440px] mx-auto flex items-center justify-between">
-        <h1 className="text-2xl font-bold text-[#252B42]">Bandage</h1>
+        <h1 className="text-xl sm:text-2xl font-bold text-[#252B42]">Bandage</h1>
         <div className="hidden lg:flex gap-4 text-sm font-bold text-[#737373]">
           <Link href={"http://localhost:3000/"} className="text-sm font-bold">
             Home
           </Link>
           <Link  href={"/Shop"} className="text-sm font-bold">
             <select>
-              <option value="">Shop</option>
+              <option  value="">Shop</option>
             </select>
           </Link>
           <Link href={"/About"} className="text-sm font-bold">
             About
           </Link>
-          <Link href={"/ProductDetails"} className="text-sm font-bold">
-            Product
+          <Link href={"/blog"} className="text-sm font-bold">
+            Blog
           </Link>
           <Link href={"/Contact"} className="text-sm font-bold">
             Contact
@@ -84,22 +83,22 @@ const Navbar = () => {
               </SheetTitle>
               <SheetDescription className="text-center">
                 <div className="flex flex-col gap-6 mt-6 text-[#737373] text-sm">
-                  <Link href={"http://localhost:3000/"} className="text-sm font-normal">
+                  <Link href={"http://localhost:3000/"} className="text-sm font-bold">
                     Home
                   </Link>
-                  <Link href={"/Shop"} className="text-sm font-normal">
+                  <Link href={"/Shop"} className="text-sm font-bold">
                     Shop
                   </Link>
-                  <Link href={"/About"} className="text-sm font-normal">
+                  <Link href={"/About"} className="text-sm font-bold">
                     About
                   </Link>
-                  <Link href={"/ProductDetails"} className="text-sm font-normal">
+                  <Link href={"/ProductDetails"} className="text-sm font-bold">
                     Product
                   </Link>
-                  <Link href={"/Contact"} className="text-sm font-normal">
+                  <Link href={"/Contact"} className="text-sm font-bold">
                     Contact
                   </Link>
-                  <Link href={"/MoreTeam"} className="text-sm font-normal">
+                  <Link href={"/MoreTeam"} className="text-sm font-bold">
                     Pages
                   </Link>
                 </div>

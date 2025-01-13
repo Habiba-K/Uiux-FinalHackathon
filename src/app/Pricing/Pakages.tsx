@@ -11,22 +11,28 @@ const Pakages = () => {
   const [plan, setPlan] = useState<Plan>("monthly");
 
   const pricingData = {
-    free: { price: "0", features: ["Unlimited product updates"] },
+    free: {
+      price: "0", 
+      features: ["Unlimited product updates","Unlimited product updates","Unlimited product updates"] ,
+      unavailablefeatures: ["1GB Cloud storage","Email and community support"]
+    },
     standard: {
       monthly: "9.99",
       yearly: "99.99",
-      features: ["Unlimited product updates", "24/7 Support"],
+      features: ["Unlimited product updates", "Unlimited product updates","Unlimited product updates"],
+      unavailablefeatures: ["1GB Cloud storage","Email and community support"]
     },
     premium: {
       monthly: "19.99",
       yearly: "199.99",
-      features: ["Unlimited product updates", "Premium support", "Custom integrations"],
+      features: ["Unlimited product updates", "Unlimited product updates", "Unlimited product updates"],
+      unavailablefeatures: ["1GB Cloud storage","Email and community support"]
     },
   };
 
   return (
-    <div className="bg-gray-50 py-10 mt-32">
-      <div className="max-w-[1440px] w-[95%] md:[75%] mx-auto px-6 text-center">
+    <div className=" py-10 mt-32">
+      <div className="max-w-[1440px] w-full md:[75%] bg-gray-50 mx-auto px-1 sm:px-6 text-center">
         {/* Title */}
         <h2 className="text-3xl font-bold text-[#252B42]">Pricing</h2>
         <p className="text-gray-600 mt-2 text-sm md:text-base max-w-lg mx-auto">
@@ -52,7 +58,7 @@ const Pakages = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Free Plan */}
           <div
-            className="md:text-base max-w-lg mx-auto border-2  border-blue-300 rounded-2xl p-6 transition"
+            className="md:text-base max-w-lg mx-auto border-2  border-blue-300 rounded-2xl p-6 transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-y-1 hover:shadow-md hover:border-black "
           >
             <h3 className="text-lg font-bold text-gray-800 ">FREE</h3>
             <p className="mt-2 text-gray-600 md:text-base max-w-lg mx-auto w-[140px] font-bold">Organize across all apps by hand</p>
@@ -62,17 +68,27 @@ const Pakages = () => {
             <ul className="text-sm text-gray-600 mt-4 space-y-2">
               {pricingData.free.features.map((feature, idx) => (
                 <li key={idx} className="flex items-center gap-2 rounded-lg font-bold text-[#252B42]">
-                 <Button color={"blue"}  size={"icon"} className="rounded-full text-white font-bold bg-green-500 ">
+                 <Button color={"blue"}  size={"icon"} className="rounded-full text-white font-bold bg-green-500  ">
                  <GoCheck />
                   </Button> {feature}
                 </li>
               ))}
             </ul>
+            <ul className="text-sm text-gray-600 mt-4 space-y-2">
+              {pricingData.free.unavailablefeatures.map((unavailablefeature, idx) => (
+                <li key={idx} className="flex items-center gap-2 rounded-lg font-bold text-[#252B42]">
+                 <Button color={"gray"}  size={"icon"} className="rounded-full text-white font-bold bg-gray-500 ">
+                 <GoCheck />
+                  </Button> {unavailablefeature}
+                </li>
+              ))}
+            </ul>
+            <Button className="rounded bg-blue-400 text-white px-20 mt-6 font-bold hover:bg-black hover:text-white">Try for Free</Button>
           </div>
 
           {/* Standard Plan */}
           <div
-            className=" md:text-base max-w-lg mx-auto border-2 border-blue-300 rounded-2xl p-6 bg-gray-600">
+            className=" md:text-base max-w-lg mx-auto border-2 border-blue-300 rounded-2xl p-6 bg-gray-600 transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-y-1">
             <h3 className="text-lg font-bold text-white">STANDARD</h3>
             <p className="mt-2 text-white md:text-base max-w-lg mx-auto w-[140px] font-bold">Organize across all apps by hand</p>
             <div className="text-3xl font-bold text-blue-500 mt-4">
@@ -87,15 +103,25 @@ const Pakages = () => {
                   <Button color={"blue"}  size={"icon"} className="rounded-full text-white font-bold bg-green-500 ">
                  <GoCheck />
                   </Button> {feature}
+               </li>
+                
+              ))}
+            </ul>
+            <ul className="text-sm text-white mt-4 space-y-2">
+              {pricingData.standard.unavailablefeatures.map((unavailablefeature, idx) => (
+                <li key={idx} className="flex items-center gap-2 rounded-lg font-bold text-white">
+                  <Button color={"gray"}  size={"icon"} className="rounded-full text-white font-bold bg-gray-500 ">
+                 <GoCheck />
+                  </Button> {unavailablefeature}
                 </li>
                 
               ))}
             </ul>
-
+            <Button className="rounded bg-blue-400 text-white px-20 mt-6 font-bold hover:bg-black hover:text-white">Try for Free</Button>
           </div>
           {/* Premium Plan */}
           <div
-            className="md:text-base max-w-lg mx-auto border-2 border-blue-300 rounded-2xl p-6 hover:shadow-md transition hover:border-black"
+            className="md:text-base max-w-lg mx-auto border-2 border-blue-300 rounded-2xl p-6 hover:shadow-md  hover:border-black transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-y-1"
           >
             <h3 className="text-lg font-bold text-gray-800">PREMIUM</h3>
             <p className="mt-2 text-gray-600 md:text-base max-w-lg mx-auto w-[140px] font-bold">Organize across all apps by hand</p>
@@ -114,7 +140,16 @@ const Pakages = () => {
                 </li>
               ))}
             </ul>
-
+            <ul className="text-sm text-gray-600 mt-4 space-y-2">
+              {pricingData.premium.unavailablefeatures.map((unavailablefeature, idx) => (
+                <li key={idx} className="flex items-center gap-2 rounded-lg font-bold text-[#252B42]">
+                  <Button color={"blue"}  size={"icon"} className="rounded-full text-white font-bold bg-gray-500 ">
+                    <GoCheck />
+                  </Button> {unavailablefeature}
+                </li>
+              ))}
+            </ul>
+            <Button className="rounded bg-blue-400 text-white px-20 mt-6 font-bold hover:bg-black hover:text-white">Try for Free</Button>
           </div>
         </div>
       </div>

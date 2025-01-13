@@ -8,7 +8,7 @@ const PricingHeader = () => {
         {/* Shop Title */}
         <div className="w-full h-[32px]  mb-[8px] ">
             <p className="font-bold text-[#737373] pb-5">PRICING</p>
-          <h2 className="font-bold text-[44px] leading-[32px] text-[#252B42] ">
+          <h2 className="font-bold text-3xl lg:text-[44px] leading-[32px]  text-[#252B42] ">
             Simple Pricing
           </h2>
         </div>

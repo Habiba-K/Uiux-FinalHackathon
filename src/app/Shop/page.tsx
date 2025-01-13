@@ -11,9 +11,9 @@ const page = () => {
   return (
     <div>
       <Topbar bgColor="bg-[#23856D]"></Topbar>
-      <Navbar /> <br /> <br />
+      <Navbar /> 
       {/* Shop Section */}
-      <div className="">
+      <div className="mt-7 md:mt-9 ">
         {/* category */}
         <section>
           <div className="px-4 md:px-8 text-[#2A254B] mt-5 bg-[#FAFAFA]">
@@ -21,7 +21,7 @@ const page = () => {
             <div className=" lg:max-w-[1440px] mx-auto h-[44px] flex flex-col justify-center md:flex-row items-center ">
               {/* Shop Title */}
               <div className="w-full h-[32px] flex justify-center md:justify-start items-center mb-[8px] ">
-                <h2 className="font-bold text-[24px] leading-[32px] text-[#252B42] ">
+                <h2 className="font-bold text-[24px] leading-[32px] text-[#252B42] mt-5">
                   Shop
                 </h2>
               </div>
@@ -39,7 +39,7 @@ const page = () => {
               </div>
             </div>
             {/* Product Items */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 mt-12 pr-10 pl-10 md:pr-0 md:pl-0">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 mt-12   md:pr-0 md:pl-0">
               {/* Product 1 */}
               <div className=" h-auto">
                 <Image
@@ -97,9 +97,9 @@ const page = () => {
         </section>
       </div>
       {/* popularity */}
-      <div className="bg-white py-4 lg:max-w-[1440px] mx-auto flex flex-col justify-center items-center md:flex-row  ">
-        <div className="w-[1050px] h-[98px] grid grid-cols-1 md:grid-cols-3 place-content-center place-items-center md:place-items-start ">
-          <div className="w-[1040px] h-[50px]  items-center flex justify-center md:justify-between">
+      <div className="mt-3 md:mt-0 bg-white py-4 w-[100%] lg:max-w-[1440px] mx-auto flex flex-col justify-center items-center md:flex-row  ">
+        <div className=" h-[98px] grid grid-cols-1 md:grid-cols-3 place-content-center place-items-center md:place-items-start ">
+          <div className="h-[50px]  items-center flex justify-center md:justify-between">
             <div className="font-bold text-[14px] leading-[24px] text-[#737373]  ">
               Showing all 12 results
             </div>
@@ -124,7 +124,7 @@ const page = () => {
             />
           </div>
           <div className="w-[252px] px-[1px] flex  gap-[15px] pt-2 md:pt-0">
-            <select className="p-4 w-[141px] h-[50px] border border-[#DDDDDD] text-[14px] rounded-lg leading-[28px] text-[#737373]">
+            <select className="p-2 sm:p-4  w-[141px] h-[50px] border border-[#DDDDDD] text-[14px] rounded-lg leading-[28px] text-[#737373]">
               <option>Popularity</option>
             </select>
             <button className="w-[94px] h-[50px] px-[20px] py-[10px] flex gap-[10px] bg-[#23A6F0] rounded-lg">

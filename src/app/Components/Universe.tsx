@@ -2,7 +2,7 @@ import React from 'react';
 
 const Universe = () => {
   return (
-      <div className="mt-10 w-full h-[810px]  bg-[#23856D] max-w-[1440px] mx-auto flex flex-col lg:flex-row justify-center items-center lg:items-center p-20">
+      <div className="mt-10 w-full h-[810px]  bg-[#23856D] max-w-[1440px] mx-auto flex flex-col lg:flex-row justify-center items-center lg:items-center md:p-20">
         {/* Left Side: Content */}
         <div className="w-full lg:w-1/2 px-5 sm:text-center lg:px-10 mt-8 lg:mt-10">
           <h5 className="text-white text-sm lg:text-base font-bold mb-3">

@@ -33,8 +33,8 @@ export default function CardSection() {
   ];
 
   return (
-    <section className="bg-white py-5  ">
-      <div className=" text-center lg:pl-20 lg:pr-20 lg:pb-10 ">
+    <section className="bg-white md:py-5 text-center ">
+      <div className=" lg:pl-20 lg:pr-20 lg:pb-10">
         <p className="text-blue-500 font-bold text-md md:text-base">
           Practice Advice
         </p>
@@ -42,16 +42,16 @@ export default function CardSection() {
           Featured Posts
         </h2>
         <div className="flex justify-center">
-          <p className="text-[#737373]  text-sm md:text-base w-[50%] ">
+          <p className="text-[#737373]  text-sm md:text-base w-[80%] md:w-[50%]   ">
             Problems trying to resolve the conflict between the two major realms
             of Classical physics: Newtonian mechanics
           </p>
         </div>
       </div>
 
-      <div className="w-[60%]  md:w-[75%] lg:max-w-[1440px] mx-auto px-4">
+      <div className=" lg:max-w-[1440px] mx-auto px-4 mt-5  ">
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
           {cards.map((card) => (
             <div
               key={card.id}

@@ -10,7 +10,7 @@ const page = () => {
       <NavAfterLogin></NavAfterLogin><br />
       <TeamImg></TeamImg>
       <MoreTeamsC></MoreTeamsC>
-      <Freetrial></Freetrial>
+      <Freetrial ></Freetrial>
     </div>
   )
 }
