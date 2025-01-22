@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
@@ -11,6 +10,12 @@ import { client } from "@/sanity/lib/client";
 import { groq } from "next-sanity";
 import { urlFor } from "@/sanity/lib/image";
 import { useState } from "react";
+import Topbar from "@/app/Components/topbar";
+import Navbar from "@/app/Navbar/Navbar";
+import Arrow from "@/app/ProductDetails/arrow";
+import AdditionalDetails from "@/app/ProductDetails/AdditionalDetails";
+import BestSellerProducts from "@/app/ProductDetails/BestSellerProducts";
+import Clients from "@/app/Components/Clients";
 
 interface ProductPageProps {
     params : Promise<{slug : string}>
@@ -41,6 +46,25 @@ export default async function ProductDetails({params}: ProductPageProps) {
 
     return (
       <div>
+         <Topbar bgColor="bg-[#23856D]"></Topbar>
+         <Navbar /> <br /> <br />
+            {/* Shop Section */}
+      <div className=" mt-5 w-full h-[40px] bg-[#FAFAFA]">
+        {/* category */}
+        <div className="px-4 md:px-8 text-[#2A254B] ">
+          {/* Breadcrumb */}
+          <div className=" flex items-center justify-start gap-[5px]">
+            <div className="font-bold text-[14px] leading-[24px] text-[#252B42]">
+              Home
+            </div>
+            <Arrow></Arrow>
+            <h6 className="font-bold text-[14px] leading-[24px] text-[#BDBDBD]">
+              Shop
+            </h6>
+          </div>
+        </div>
+      </div>
+      
         {/* Product Section */}
         <div className="bg-[#FAFAFA] container mx-auto px-4 py-12 flex flex-col md:flex-row gap-8 ">
           {/* Left Section - Image Slider */}
@@ -118,7 +142,7 @@ export default async function ProductDetails({params}: ProductPageProps) {
             </h1>
             <div className="flex items-center mt-2">
               <span className="flex items-center text-yellow-400">
-                {[...Array(product?.rating)].map((_, i) => (
+                {[...Array(5)].map((_, i) => (
                   <svg
                     key={i}
                     xmlns="http://www.w3.org/2000/svg"
@@ -179,6 +203,13 @@ export default async function ProductDetails({params}: ProductPageProps) {
           </div>
         </div>
        
+        <AdditionalDetails></AdditionalDetails>
+      
+      {/* <BestSellerProducts></BestSellerProducts> */}
+      {/* cards */}
+      <Clients></Clients>
+
+
       </div>
     );
   }

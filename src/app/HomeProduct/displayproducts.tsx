@@ -64,13 +64,15 @@ export default function DisplayedProductsHome() {
                    </div>
                      <div className="grid grid-cols-2 gap-2 ">
                                       <Button className=" mt-4 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700"
-                                      >
+                                       onClick={() => alert('please login')}>
                                        Add To Cart
                                       </Button>
-                                      <Button className=" mt-4 w-full bg-gray-400 text-white py-2 rounded-md hover:bg-blue-700"
-                                      >
-                                       Details
-                                      </Button>
+                                      <Link href={`/product/${product.slug.current}`}>
+                                        <Button className=" mt-4 w-full bg-gray-400 text-white py-2 rounded-md hover:bg-blue-700"
+                                        >
+                                        Details
+                                        </Button>
+                                     </Link>
                                       </div>
                   {/* <Tags></Tags> */}
                  </div>
