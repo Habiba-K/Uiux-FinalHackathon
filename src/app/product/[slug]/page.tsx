@@ -142,7 +142,7 @@ export default async function ProductDetails({params}: ProductPageProps) {
             </div>
   
             {/* Price and Availability */}
-            <p className="text-xl font-semibold text-black mt-4">{product?.price}</p>
+            <p className="text-xl font-semibold text-black mt-4">$ {product?.price}</p>
             <p className="text-sm text-gray-500 mt-2">
               Availability:{" "}
               <span className="text-[#23A6F0] font-medium">In Stock</span>

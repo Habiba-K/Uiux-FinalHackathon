@@ -2,7 +2,7 @@
 import ProductCard from "../Products/page"; // Import the ProductCard component
 import ProductHeader from "../Components/ProductHeader";
 import React , {useEffect, useState} from "react";
-import { eight } from "@/sanity/lib/queries";
+import { allProducts } from "@/sanity/lib/queries";
 import { client } from "@/sanity/lib/client";
 import { Product } from "../../../types/products";
 import { urlFor } from "@/sanity/lib/image";
@@ -20,7 +20,7 @@ export default function ProductCrousel() {
         } ;
   useEffect(() =>{
     async function fetchproduct(){
-      const fetchedProduct : Product [] = await client.fetch(eight)
+      const fetchedProduct : Product [] = await client.fetch(allProducts)
       setProduct(fetchedProduct)
     }
     fetchproduct()
