@@ -1,81 +1,115 @@
-"use client"
-import { useState } from "react";
-import products from "./products";
-import ProductCard from "./ProductCard";
-
-export default function ProductCarousel() {
-  const itemsPerPage = 12; // 3 rows * 4 columns
-  const [currentPage, setCurrentPage] = useState(1);
-
-  const totalPages = Math.ceil(products.length / itemsPerPage);
-  const currentProducts = products.slice(
-    (currentPage - 1) * itemsPerPage,
-    currentPage * itemsPerPage
-  );
-
-  const handleNext = () => {
-    if (currentPage < totalPages) {
-      setCurrentPage((prev) => prev + 1);
+"use client";
+import ProductCard from "../Products/page"; // Import the ProductCard component
+import ProductHeader from "../Components/ProductHeader";
+import React , {useEffect, useState} from "react";
+import { eight } from "@/sanity/lib/queries";
+import { client } from "@/sanity/lib/client";
+import { Product } from "../../../types/products";
+import { urlFor } from "@/sanity/lib/image";
+import Link from "next/link";
+import Tags from "../Components/tags";
+import Image from 'next/image';
+import { Button } from "@/components/ui/button";
+export default function ProductCrousel() {
+  // Select the first 8 products from the list
+  const [product, setProduct] = useState<Product[]>([])
+  const [cart, setCart] = useState <Product[]>([]);
+  const addToCart = (product : Product) => {
+            setCart((preCart) => [...preCart, product] );
+            alert(`${product.title} has been added to your Cart!`);
+        } ;
+  useEffect(() =>{
+    async function fetchproduct(){
+      const fetchedProduct : Product [] = await client.fetch(eight)
+      setProduct(fetchedProduct)
     }
-  };
-
-  const handlePrev = () => {
-    if (currentPage > 1) {
-      setCurrentPage((prev) => prev - 1);
-    }
-  };
-
+    fetchproduct()
+  },[])
   return (
-    <div className="bg-white py-10">
-      <div className="w-[100%]  md:w-[95%] lg:max-w-[1440px] mx-auto px-4">
-        {/* Products Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6  overflow-hidden">
-          {currentProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
 
-        {/* Pagination Controls */}
-        <div className="flex justify-center items-center mt-8 gap-4">
-          <button
-            onClick={handlePrev}
-            disabled={currentPage === 1}
-            className={`px-2 sm:px-4 py-2 rounded-md border text-xs sm:text-base ${
-              currentPage === 1
-                ? "bg-gray-300 text-gray-500 cursor-not-allowed"
-                : "bg-white text-blue-500 hover:bg-blue-100"
-            }`}
-          >
-            Previous
-          </button>
-          <div className="flex gap-2">
-            {Array.from({ length: totalPages }, (_, i) => (
-              <button
-                key={i}
-                onClick={() => setCurrentPage(i + 1)}
-                className={`px-2 sm:px-3 py-2 rounded-md text-xs sm:text-base ${
-                  currentPage === i + 1
-                    ? "bg-blue-500 text-white"
-                    : "bg-white text-blue-500 border hover:bg-blue-100"
-                }`}
-              >
-                {i + 1}
-              </button>
-            ))}
+    <div>
+      <ProductHeader></ProductHeader>
+
+      <div className="bg-white py-10">
+        <div className="w-[100%]  lg:max-w-[1440px]  mx-auto px-4 ">
+          
+          <div className=" ">
+               <div className="flex justify-center items-center text-center">
+               <div className=" justify-center  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 overflow-hidden">
+               {product.map((product)=> (
+                       <div key={product._id}>
+               {product.productImage &&(
+                         <Image
+                         src={urlFor(product.productImage).url()}
+                         alt={product.title}
+                         width ={200}
+                         height = {300}
+                         className="w-full h-48 object-fill"
+                         />
+                 )}
+                 <div className="p-4">
+                   <Link href={"/ProductDetails"}>
+                     <h3 className="text-lg text-[#252B42] font-bold text-md  truncate hover:text-clip tex">{product.title}</h3>
+                   </Link>
+                   <p className="text-sm text-[#737373] font-bold text-clip line-clamp-2">{product.description}</p>
+                   <div className="flex gap-2 mt-2 justify-center">
+                     <span className="text-black font-bold text-sm">
+                       ${product.price}</span>
+                       {product.discountPercentage > 0 && (
+                        <span className="text-green-600 font-semibold text-sm">{product.discountPercentage}% OFF</span>
+
+                       )}
+                     
+                   </div>
+                   <div className="mt-2 flex flex-wrap  gap-2">
+                    {product.tags.map((tag,index)=>(
+                        <span key={index}
+                        className="text-xs bg-slate-300 text-black rounded-full px-2 py-1">{tag}</span>
+                    ))}
+                   </div>
+                   <Button className="mt-4 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700"
+                   onClick={() => addToCart(product)}>
+                    Add To Cart
+                   </Button>
+                  {/* <Tags></Tags> */}
+                 </div>
+                 </div>
+                 ))}
+          
+             </div>
+             </div>
+             
           </div>
-          <button
-            onClick={handleNext}
-            disabled={currentPage === totalPages}
-            className={`px-2 sm:px-4 py-2 rounded-md border text-xs sm:text-base ${
-              currentPage === totalPages
-                ? "bg-gray-300 text-gray-500 cursor-not-allowed"
-                : "bg-white text-blue-500 hover:bg-blue-100"
-            }`}
-          >
-            Next
-          </button>
-        </div>
       </div>
     </div>
-  );
-}
+
+ {/* card summary */}
+    <div className='mt-8 bg-slate-100 p-6 rounded-lg shadow-md'>
+        <h2 className='text-lg font-black text-red-800'>Cart Summary</h2>
+        {cart.length > 0 ?(
+             <ul className='space-y-4'>
+                {cart.map((item,index) => (
+                    <li
+                        key={index}
+                        className='flex justify-between items-center bg-white shadow-sm p-4 rounded-md'>
+                            <div>
+                                <p className='font-medium text-slate-900'>{item.title}</p>
+                                <p className='text-sm text-blue-600'>${item.price.toFixed(2)}</p>
+                            </div>
+                            <Image
+                                src={item.productImage ? urlFor(item.productImage).url() : ''}
+                                alt={item.title}
+                                width={50}
+                                height={50}
+                                className='rounded-md'/>
+                            
+                        </li>
+                        
+                ))}
+             </ul>
+        ) :(
+            <p className='text-black text-center'> Your Cart is Empty Please Add Products</p>
+        )};
+    </div> 
+    </div>
+  )}

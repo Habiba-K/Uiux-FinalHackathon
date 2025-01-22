@@ -14,7 +14,7 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <EditorPick></EditorPick>
-      <DisplayedProductsHome />
+      < DisplayedProductsHome/>
       <Universe />
       <Neutraluniverse />
       <CardSection></CardSection>

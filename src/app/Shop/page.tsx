@@ -2,10 +2,9 @@ import React from "react";
 import Topbar from "../Components/topbar";
 import Navbar from "../Navbar/Navbar";
 import Image from "next/image";
-import ProductCrousel from "../Components/ProductCrousel";
-import ProductCard from "../Components/ProductCard";
 import Clients from "../Components/Clients";
 import Arrow from "../ProductDetails/arrow";
+import ProductCrousel from "../Components/ProductCrousel";
 
 const page = () => {
   return (
@@ -136,7 +135,7 @@ const page = () => {
         </div>
       </div>
      <Clients></Clients>
-      <ProductCrousel></ProductCrousel>
+    <ProductCrousel/>
     </div>
   );
 };
