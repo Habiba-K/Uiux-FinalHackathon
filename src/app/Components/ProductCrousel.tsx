@@ -7,7 +7,6 @@ import { client } from "@/sanity/lib/client";
 import { Product } from "../../../types/products";
 import { urlFor } from "@/sanity/lib/image";
 import Link from "next/link";
-import Tags from "../Components/tags";
 import Image from 'next/image';
 import { Button } from "@/components/ui/button";
 export default function ProductCrousel() {
